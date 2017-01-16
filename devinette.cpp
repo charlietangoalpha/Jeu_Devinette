@@ -2,9 +2,15 @@
 #include<string>
 #include <time.h>
 #include <stdlib.h>
+#include <stdio.h>
 using namespace std;
 int main()
 {
+char response;
+
+do
+{
+
 srand(time(NULL));
 string tabLettreS,essai,affiche,rep,tabMots[10]={"hahahahaha","tyroide","rideau","egypte","sahara","ordinateur","chat","casserole","dromadaire","thomassin"};
 int aleat=rand()%10,nbErreur=7,nbPass=0,tab[10],indice=0,indice1=0;
@@ -86,4 +92,9 @@ else
 {
     cout<<"Bravo vous avez trouvé le mot !";
 }
+printf("Voulez vous continuer, (O/N)\n", response);
 }
+while (response == 'O');
+return 0;
+}
+
